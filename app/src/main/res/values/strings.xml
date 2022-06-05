@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Quiz1_Question</string>
+    <string name="button_inc">increment</string>
+    <string name="button_dec">decrement</string>
+    <string name="button_reset">reset</string>
+    <string name="button_toast">show toast</string>
+    <string name="button_snackbar">show snackbar</string>
+</resources>
