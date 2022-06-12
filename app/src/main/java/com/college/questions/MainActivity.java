@@ -1,161 +1,110 @@
 package com.college.questions;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ShareCompat;
-
-import android.content.Intent;
-import android.net.Uri;
+import androidx.core.content.ContextCompat;
+import android.content.SharedPreferences;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
-
+import android.widget.TextView;
 
 
 /**
- * The ImplicitIntents app contains three buttons for sending implicit intents:
- * - Open a URL in a browser
- * - Find a location on a map
- * - Share a text string
- * - View the Contacts
- * - Dial a number
- * */
+ *  This project is an adaptation from Google Sample Code. It includes:
+ * - Buttons for changing the background Color.
+ * - Buttons to cunt up and reset the Counter
+ * - Save and Restaure Prefs button to store and retrieve current color and Counter
+ */
 public class MainActivity extends AppCompatActivity {
+    // Current count.
+    private int mCount = 0;
+    // Current background color.
+    private int mColor;
+    // Text view to display both count and color.
+    private TextView mShowCountTextView;
 
-    private final String LOG_TAG="MainActivity";
-    // EditText view for the website URI
-    private EditText mWebsiteEditText;
-    // EditText view for the location URI
-    private EditText mLocationEditText;
-    // EditText view for the share text
-    private EditText mShareTextEditText;
-    //EditText for Dial action
-    private EditText mDialEditText;
+    // Key for current count
+    private final String COUNT_KEY = "count";
+    // Key for current color
+    private final String COLOR_KEY = "color";
 
-    /**
-     * Initializes the activity.
-     *
-     * @param savedInstanceState The current state data
-     */
+    // Shared preferences object
+    private SharedPreferences mPreferences;
+    // Name of shared preferences file
+    private static final String mSharedPrefFile = "mysharedprefs";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mWebsiteEditText = findViewById(R.id.website_edittext);
-        mLocationEditText = findViewById(R.id.location_editext);
-        mShareTextEditText = findViewById(R.id.share_edittext);
-        mDialEditText = findViewById(R.id.phone_edittext);
+        // Initialize views, color, preferences
+        mShowCountTextView = findViewById(R.id.count_textview);
+        mColor = ContextCompat.getColor(this, R.color.default_background);
+        mPreferences = getSharedPreferences(mSharedPrefFile, MODE_PRIVATE);
+
+    }
+
+
+    public void savePrefs(View v) {
+        SharedPreferences.Editor preferencesEditor = mPreferences.edit();
+        preferencesEditor.putInt(COUNT_KEY, mCount);
+        preferencesEditor.putInt(COLOR_KEY, mColor);
+        preferencesEditor.apply();
+    }
+
+    public void restaurePrefs(View v) {
+        mCount = mPreferences.getInt(COUNT_KEY, 0);
+        mShowCountTextView.setText(String.format("%s", mCount));
+        mColor = mPreferences.getInt(COLOR_KEY, mColor);
+        mShowCountTextView.setBackgroundColor(mColor);
     }
 
     /**
-     * Handles the onClick for the "Open Website" button.  Gets the URI
-     * from the edit text and sends an implicit intent for that URL.
+     * Handles the onClick for the background color buttons.
+     * Gets background color of the button
+     * that was clicked and sets the textview background to that color.
      *
      * @param view The view (Button) that was clicked.
      */
-    public void openWebsite(View view) {
-        // Get the URL text.
-        String url = mWebsiteEditText.getText().toString();
-
-        // Parse the URI and create the intent.
-        Uri webpage = Uri.parse(url);
-        Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
-
-        // Find an activity to handle the intent and start that activity.
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(intent);
-        } else {
-            Log.d("ImplicitIntents", "Can't handle this intent!");
-        }
+    public void changeBackground(View view) {
+        int color = ((ColorDrawable) view.getBackground()).getColor();
+        mShowCountTextView.setBackgroundColor(color);
+        mColor = color;
     }
 
     /**
-     * Handles the onClick for the "Open Location" button.  Gets the location
-     * text from the edit text and sends an implicit intent for that location.
-     *
-     * The location text can be any searchable geographic location.
+     * Handles the onClick for the Count button.  Increments the value of the mCount global and
+     * updates the textview.
      *
      * @param view The view (Button) that was clicked.
      */
-    public void openLocation(View view) {
-        // Get the string indicating a location.  Input is not validated; it is
-        // passed to the location handler intact.
-        String loc = mLocationEditText.getText().toString();
+    public void countUp(View view) {
+        mCount++;
+        mShowCountTextView.setText(String.format("%s", mCount));
 
-        // Parse the location and create the intent.
-        Uri addressUri = Uri.parse("geo:0,0?q=" + loc);
-        Intent intent = new Intent(Intent.ACTION_VIEW, addressUri);
-
-        // Find an activity to handle the intent, and start that activity.
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(intent);
-        } else {
-            Log.d("ImplicitIntents", "Can't handle this intent!");
-        }
     }
 
     /**
-     * Handles the onClick for the "Share This Text" button.  The
-     * implicit intent here is created by the  {@link ShareCompat.IntentBuilder}
-     * class.  An app chooser appears with the available options for sharing.
-     *
-     * ShareCompat.IntentBuilder is from the v4 Support Library.
+     * Handles the onClick for the Reset button.  Resets the global count and background
+     * variables to the defaults, resets the views to those values, and clears the shared
+     * preferences
      *
      * @param view The view (Button) that was clicked.
      */
-    public void shareText(View view) {
-        // Get the shared text.
-        String txt = mShareTextEditText.getText().toString();
+    public void reset(View view) {
+        // Reset count
+        mCount = 0;
+        mShowCountTextView.setText(String.format("%s", mCount));
 
-        // Build the share intent with the mimetype text/plain and launch
-        // a chooser for the user to pick an app.
-        ShareCompat.IntentBuilder
-                .from(this)
-                .setType("text/plain")
-                .setChooserTitle("Share this text with: ")
-                .setText(txt)
-                .startChooser();
+        // Reset color
+        mColor = ContextCompat.getColor(this, R.color.default_background);
+        mShowCountTextView.setBackgroundColor(mColor);
+
+        // Clear preferences
+        SharedPreferences.Editor preferencesEditor = mPreferences.edit();
+        preferencesEditor.clear();
+        preferencesEditor.apply();
+
     }
-
-
-    /**
-     * Handles the onClick for the "View Contacts" button.
-     *
-     * @param view The view (Button) that was clicked.
-     */
-    public void viewContact(View view) {
-        Intent i = new Intent();
-        i.setAction(Intent.ACTION_VIEW);
-        i.setData(Uri.parse("content://contacts/people/"));
-
-        // Find an activity to handle the intent, and start that activity.
-        if (i.resolveActivity(getPackageManager()) != null) {
-            startActivity(i);
-        } else {
-            Log.d(LOG_TAG, "Can't handle this intent!");
-        }
-    }
-
-    /**
-     * Handles the onClick for the "Dial" button.
-     *
-     * @param view The view (Button) that was clicked.
-     */
-    public void dial(View view) {
-        Intent i = new Intent();
-        i.setAction(Intent.ACTION_DIAL);
-
-        EditText numberView = findViewById(R.id.phone_edittext);
-        String numberStr = numberView.getText().toString();
-        i.setData( Uri.parse("tel:" + numberStr));
-
-        // Find an activity to handle the intent, and start it
-        if (i.resolveActivity(getPackageManager()) != null) {
-            startActivity(i);
-        } else {
-            Log.d(LOG_TAG, "Can't handle this intent!");
-        }
-    }
-
 }

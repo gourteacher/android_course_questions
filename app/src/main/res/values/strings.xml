@@ -1,18 +1,24 @@
 <resources>
     <string name="app_name">Course Questions - Implicit Intents</string>
-    <!-- Default text for Open Website -->
-    <string name="edittext_uri">http://www.cbc.ca</string>
-    <!-- Button label for Open Website [CHAR LIMIT=20]-->
-    <string name="button_uri">Open Website</string>
-    <!-- Default text for Open Location [CHAR LIMIT=30]-->
-    <string name="edittext_loc">Gatineau Park</string>
-    <!-- Button label for Open Location [CHAR LIMIT=20]-->
-    <string name="button_loc">Open Location</string>
-    <!-- Default text for Share This Text [CHAR LIMIT=NONE]-->
-    <string name="edittext_share">Just bought the flowers</string>
-    <!-- Button label for Share This Text [CHAR LIMIT=20]-->
-    <string name="button_share">Share This Text</string>
-    <string name="view_contacts_button">View Contacts</string>
-    <string name="phone_hint">Enter phone number</string>
-    <string name="phone_button">Dial</string>
+    <!-- Button label for blue button -->
+    <string name="blue_button">Blue</string>
+
+    <!-- Button label for green button -->
+    <string name="green_button">Green</string>
+    <!-- Button label for red button -->
+    <string name="red_button">Red</string>
+
+    <!-- Button label for black button -->
+    <string name="purple_button">Purple</string>
+
+    <!-- Default string for count textview -->
+    <string name="default_count">0</string>
+
+    <!-- Button label for Count button -->
+    <string name="count_button">Count</string>
+
+    <!-- Button label for Reset button -->
+    <string name="reset_button">Reset</string>
+    <string name="save_button">Save Prefs</string>
+    <string name="restaure_button">Restaure Prefs</string>
 </resources>
