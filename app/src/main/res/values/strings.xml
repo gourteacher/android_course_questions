@@ -1,8 +1,7 @@
 <resources>
-    <string name="app_name">Quiz1_Question</string>
-    <string name="button_inc">increment</string>
-    <string name="button_dec">decrement</string>
-    <string name="button_reset">reset</string>
-    <string name="button_toast">show toast</string>
-    <string name="button_snackbar">show snackbar</string>
+    <string name="app_name">Course Questions - Burger</string>
+    <string name="title_str">Best Burger</string>
+    <string name="submit_btn">Pay</string>
+    <string name="reset_btn">Clear</string>
+    <string name="zero_str">0</string>
 </resources>
