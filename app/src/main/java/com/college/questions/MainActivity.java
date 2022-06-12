@@ -10,8 +10,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
-
-
 /**
  * The ImplicitIntents app contains three buttons for sending implicit intents:
  * - Open a URL in a browser
@@ -20,6 +18,7 @@ import android.widget.EditText;
  */
 public class MainActivity extends AppCompatActivity {
 
+    private final String LOG_TAG="MainActivity";
     // EditText view for the website URI
     private EditText mWebsiteEditText;
     // EditText view for the location URI
@@ -42,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         mShareTextEditText = findViewById(R.id.share_edittext);
     }
 
+    // TODO
     /**
      * Handles the onClick for the "Open Website" button.  Gets the URI
      * from the edit text and sends an implicit intent for that URL.
@@ -49,21 +49,9 @@ public class MainActivity extends AppCompatActivity {
      * @param view The view (Button) that was clicked.
      */
     public void openWebsite(View view) {
-        // Get the URL text.
-        String url = mWebsiteEditText.getText().toString();
-
-        // Parse the URI and create the intent.
-        Uri webpage = Uri.parse(url);
-        Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
-
-        // Find an activity to handle the intent and start that activity.
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(intent);
-        } else {
-            Log.d("ImplicitIntents", "Can't handle this intent!");
-        }
     }
 
+    // TODO
     /**
      * Handles the onClick for the "Open Location" button.  Gets the location
      * text from the edit text and sends an implicit intent for that location.
@@ -73,22 +61,10 @@ public class MainActivity extends AppCompatActivity {
      * @param view The view (Button) that was clicked.
      */
     public void openLocation(View view) {
-        // Get the string indicating a location.  Input is not validated; it is
-        // passed to the location handler intact.
-        String loc = mLocationEditText.getText().toString();
 
-        // Parse the location and create the intent.
-        Uri addressUri = Uri.parse("geo:0,0?q=" + loc);
-        Intent intent = new Intent(Intent.ACTION_VIEW, addressUri);
-
-        // Find an activity to handle the intent, and start that activity.
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(intent);
-        } else {
-            Log.d("ImplicitIntents", "Can't handle this intent!");
-        }
     }
 
+    // TODO
     /**
      * Handles the onClick for the "Share This Text" button.  The
      * implicit intent here is created by the  {@link ShareCompat.IntentBuilder}
@@ -99,16 +75,26 @@ public class MainActivity extends AppCompatActivity {
      * @param view The view (Button) that was clicked.
      */
     public void shareText(View view) {
-        // Get the shared text.
-        String txt = mShareTextEditText.getText().toString();
 
-        // Build the share intent with the mimetype text/plain and launch
-        // a chooser for the user to pick an app.
-        ShareCompat.IntentBuilder
-                .from(this)
-                .setType("text/plain")
-                .setChooserTitle("Share this text with: ")
-                .setText(txt)
-                .startChooser();
     }
+
+    // TODO
+    /**
+     * Handles the onClick for the "Dial" button.
+     *
+     * @param view The view (Button) that was clicked.
+     */
+    public void dial(View view) {
+    }
+
+    // TODO
+    /**
+     * Handles the onClick for the "View Contacts" button.
+     *
+     * @param view The view (Button) that was clicked.
+     */
+    public void viewContact(View view) {
+
+    }
+
 }
