@@ -45,6 +45,19 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Handles the onClick for the background color buttons.
+     * Gets background color of the button
+     * that was clicked and sets the textview background to that color.
+     *
+     * @param view The view (Button) that was clicked.
+     */
+    public void changeBackground(View view) {
+        int color = ((ColorDrawable) view.getBackground()).getColor();
+        mShowCountTextView.setBackgroundColor(color);
+        mColor = color;
+    }
+
 
     public void savePrefs(View v) {
         SharedPreferences.Editor preferencesEditor = mPreferences.edit();
@@ -60,18 +73,6 @@ public class MainActivity extends AppCompatActivity {
         mShowCountTextView.setBackgroundColor(mColor);
     }
 
-    /**
-     * Handles the onClick for the background color buttons.
-     * Gets background color of the button
-     * that was clicked and sets the textview background to that color.
-     *
-     * @param view The view (Button) that was clicked.
-     */
-    public void changeBackground(View view) {
-        int color = ((ColorDrawable) view.getBackground()).getColor();
-        mShowCountTextView.setBackgroundColor(color);
-        mColor = color;
-    }
 
     /**
      * Handles the onClick for the Count button.  Increments the value of the mCount global and
