@@ -1,7 +1,15 @@
 <resources>
-    <string name="app_name">Course Questions - Burger</string>
-    <string name="title_str">Best Burger</string>
-    <string name="submit_btn">Pay</string>
-    <string name="reset_btn">Clear</string>
-    <string name="zero_str">0</string>
+    <string name="app_name">Course Questions - Implicit Intents</string>
+    <!-- Default text for Open Website -->
+    <string name="edittext_uri">http://www.cbc.ca</string>
+    <!-- Button label for Open Website [CHAR LIMIT=20]-->
+    <string name="button_uri">Open Website</string>
+    <!-- Default text for Open Location [CHAR LIMIT=30]-->
+    <string name="edittext_loc">Gatineau Park</string>
+    <!-- Button label for Open Location [CHAR LIMIT=20]-->
+    <string name="button_loc">Open Location</string>
+    <!-- Default text for Share This Text [CHAR LIMIT=NONE]-->
+    <string name="edittext_share">Just bought the flowers</string>
+    <!-- Button label for Share This Text [CHAR LIMIT=20]-->
+    <string name="button_share">Share This Text</string>
 </resources>
