@@ -11,10 +11,12 @@ import android.view.View;
 import android.widget.EditText;
 
 /**
- * The ImplicitIntents app contains three buttons for sending implicit intents:
+ * The ImplicitIntents app contains buttons for sending implicit intents:
  * - Open a URL in a browser
  * - Find a location on a map
  * - Share a text string
+ * - View the Contacts
+ * - Dial a number
  */
 public class MainActivity extends AppCompatActivity {
 
