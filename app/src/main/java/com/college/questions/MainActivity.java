@@ -17,15 +17,20 @@ import android.widget.EditText;
  * - Open a URL in a browser
  * - Find a location on a map
  * - Share a text string
- */
+ * - View the Contacts
+ * - Dial a number
+ * */
 public class MainActivity extends AppCompatActivity {
 
+    private final String LOG_TAG="MainActivity";
     // EditText view for the website URI
     private EditText mWebsiteEditText;
     // EditText view for the location URI
     private EditText mLocationEditText;
     // EditText view for the share text
     private EditText mShareTextEditText;
+    //EditText for Dial action
+    private EditText mDialEditText;
 
     /**
      * Initializes the activity.
@@ -40,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         mWebsiteEditText = findViewById(R.id.website_edittext);
         mLocationEditText = findViewById(R.id.location_editext);
         mShareTextEditText = findViewById(R.id.share_edittext);
+        mDialEditText = findViewById(R.id.phone_edittext);
     }
 
     /**
@@ -111,4 +117,45 @@ public class MainActivity extends AppCompatActivity {
                 .setText(txt)
                 .startChooser();
     }
+
+
+    /**
+     * Handles the onClick for the "View Contacts" button.
+     *
+     * @param view The view (Button) that was clicked.
+     */
+    public void viewContact(View view) {
+        Intent i = new Intent();
+        i.setAction(Intent.ACTION_VIEW);
+        i.setData(Uri.parse("content://contacts/people/"));
+
+        // Find an activity to handle the intent, and start that activity.
+        if (i.resolveActivity(getPackageManager()) != null) {
+            startActivity(i);
+        } else {
+            Log.d(LOG_TAG, "Can't handle this intent!");
+        }
+    }
+
+    /**
+     * Handles the onClick for the "Dial" button.
+     *
+     * @param view The view (Button) that was clicked.
+     */
+    public void dial(View view) {
+        Intent i = new Intent();
+        i.setAction(Intent.ACTION_DIAL);
+
+        EditText numberView = findViewById(R.id.phone_edittext);
+        String numberStr = numberView.getText().toString();
+        i.setData( Uri.parse("tel:" + numberStr));
+
+        // Find an activity to handle the intent, and start it
+        if (i.resolveActivity(getPackageManager()) != null) {
+            startActivity(i);
+        } else {
+            Log.d(LOG_TAG, "Can't handle this intent!");
+        }
+    }
+
 }

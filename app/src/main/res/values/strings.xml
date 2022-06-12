@@ -12,4 +12,7 @@
     <string name="edittext_share">Just bought the flowers</string>
     <!-- Button label for Share This Text [CHAR LIMIT=20]-->
     <string name="button_share">Share This Text</string>
+    <string name="view_contacts_button">View Contacts</string>
+    <string name="phone_hint">Enter phone number</string>
+    <string name="phone_button">Dial</string>
 </resources>
