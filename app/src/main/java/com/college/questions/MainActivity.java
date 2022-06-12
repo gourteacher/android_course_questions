@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     private EditText mLocationEditText;
     // EditText view for the share text
     private EditText mShareTextEditText;
+    //EditText for Dial action
+    private EditText mDialEditText;
 
     /**
      * Initializes the activity.
@@ -39,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
         mWebsiteEditText = findViewById(R.id.website_edittext);
         mLocationEditText = findViewById(R.id.location_editext);
         mShareTextEditText = findViewById(R.id.share_edittext);
+        mDialEditText = findViewById(R.id.phone_edittext);
+
     }
 
     // TODO
