@@ -3,6 +3,7 @@ package com.college.quiz1_question;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,7 +18,23 @@ public class MainActivity extends AppCompatActivity {
         TextView counterView = findViewById(R.id.counterId);
 
         //TODO
-        //Your code here
+        Button btnReset = findViewById(R.id.buttonResetId);
+        btnReset.setOnClickListener(click -> {
+            mCounter = 0;
+            counterView.setText(String.valueOf(mCounter));
+        });
 
+        Button btnIncrement = findViewById(R.id.buttonIncId);
+        btnIncrement.setOnClickListener((clck) -> {
+            mCounter++;
+            counterView.setText(String.valueOf(mCounter));
+        });
+
+        Button btnDecrement = findViewById(R.id.buttonDecId);
+        btnDecrement.setOnClickListener((clck) -> {
+            mCounter--;
+            mCounter = (mCounter < 0) ? 0 : mCounter;
+            counterView.setText(String.valueOf(mCounter));
+        });
     }
 }
