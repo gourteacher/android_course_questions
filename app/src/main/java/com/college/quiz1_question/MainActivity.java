@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -14,27 +15,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //counterView is the TextView that displays the value of the counter
-        TextView counterView = findViewById(R.id.counterId);
+        // This EditText contains the user input
+        // for the number of burgers
+        EditText numberStr = findViewById(R.id.numberId);
 
-        //TODO
-        Button btnReset = findViewById(R.id.buttonResetId);
-        btnReset.setOnClickListener(click -> {
-            mCounter = 0;
-            counterView.setText(String.valueOf(mCounter));
-        });
+        // This textview displays the result of multiplying
+        // the content of the numberId EditText by 5
+        TextView resultTv = findViewById(R.id.resultId);
 
-        Button btnIncrement = findViewById(R.id.buttonIncId);
-        btnIncrement.setOnClickListener((clck) -> {
-            mCounter++;
-            counterView.setText(String.valueOf(mCounter));
-        });
+        // TODO
+        // Implement the 2 listeners for buttons 'clear' and 'pay'
+        // One burger is $5
+        // Result should contain 5 multiplied by number chosen
+        // Display should be prefixed with the '$' sign such as $15
+        // Reset should clear all the fields
 
-        Button btnDecrement = findViewById(R.id.buttonDecId);
-        btnDecrement.setOnClickListener((clck) -> {
-            mCounter--;
-            mCounter = (mCounter < 0) ? 0 : mCounter;
-            counterView.setText(String.valueOf(mCounter));
-        });
     }
 }
