@@ -1,24 +1,26 @@
 <resources>
-    <string name="app_name">Course Questions - Implicit Intents</string>
-    <!-- Button label for blue button -->
-    <string name="blue_button">Blue</string>
+    <string name="app_name">Question - Calculator</string>
 
-    <!-- Button label for green button -->
-    <string name="green_button">Green</string>
-    <!-- Button label for red button -->
-    <string name="red_button">Red</string>
+    <!-- Hint for first operand EditText -->
+    <string name="type_operand_one_hint">Type Operand 1</string>
 
-    <!-- Button label for black button -->
-    <string name="purple_button">Purple</string>
+    <!-- Hint for second operand EditText -->
+    <string name="type_operand_two_hint">Type Operand 2</string>
 
-    <!-- Default string for count textview -->
-    <string name="default_count">0</string>
+    <!-- Button label for add operation -->
+    <string name="add_operation_text">Add</string>
 
-    <!-- Button label for Count button -->
-    <string name="count_button">Count</string>
+    <!-- Button label for subtract operation -->
+    <string name="sub_operation_text">Sub</string>
 
-    <!-- Button label for Reset button -->
-    <string name="reset_button">Reset</string>
-    <string name="save_button">Save Prefs</string>
-    <string name="restaure_button">Restaure Prefs</string>
+    <!-- Button label for divide operation -->
+    <string name="div_operation_text">Div</string>
+
+    <!-- Button label for mul operation -->
+    <string name="mul_operation_text">Mul</string>
+
+    <!-- Message for textview in case of errors  -->
+    <string name="computationError">Error</string>
+    <string name="operation_result">Result</string>
+
 </resources>
