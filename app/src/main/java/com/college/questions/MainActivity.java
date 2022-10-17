@@ -40,9 +40,8 @@ public class MainActivity extends AppCompatActivity {
         //TODO 1: Add item at the top of the list
         // You can use createEntry() to generate a String
 
-
         //TODO 2: Add item at the end of the list.
-        //You can use createEntry() to generate a String
+        // You can use createEntry() to generate a String
 
 
         //TODO 3: Delete item at the top of the list);
@@ -50,20 +49,20 @@ public class MainActivity extends AppCompatActivity {
         //TODO 4: Delete item at the bottom of the list.
 
 
-        //TODO 5: Delete item at the top of the list);
-
-
-        //TODO 6: Delete element when an item is clicked with a short click
+        //TODO 5: Delete element when an item is clicked with a short click
         // Use the ListView
 
-        //TODO 7: Add element after an item is clicked with a long click
+        //TODO 6: Add element after an item is clicked with a long click
         // Use the ListView
+
+        //TODO 7: Clear all the items in the list
+
     }
 
     //Create a String to add in the row
     private String createEntry() {
         SimpleDateFormat dateformat =
-                new SimpleDateFormat("HH:mm:ss", Locale.CANADA);
+                new SimpleDateFormat(" HH:mm:ss", Locale.CANADA);
         return dateformat.format(new Date());
     }
 }
