@@ -1,5 +1,9 @@
 <resources>
-    <string name="app_name">Question -Listview</string>
-
-
+    <string name="app_name">Question - Activities</string>
+    <string name="rank_hint">Rank</string>
+    <string name="name_hint">Name</string>
+    <string name="next_activity">Go To 2nd Activity</string>
+    <string name="received_info_tv">Received Info</string>
+    <string name="back_button">Back</string>
+    <string name="Activity_2_name">Activity Two</string>
 </resources>
