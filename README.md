@@ -23,3 +23,9 @@ This project is an adaptation from Google Sample Code. It includes:
 
 Each branch has a MainActivity.java file where the work to do is identified by a `TODO`. 
 This is the only file to change. Everything else is done for you.
+
+### Branch read_json_question
+- This application decodes a JSON file and displays the results on a textview.
+- The application reads a restaurants JSON file and builds a list of restaurants.
+- We then display the list of the names of the restaurants  in the TextView.
+

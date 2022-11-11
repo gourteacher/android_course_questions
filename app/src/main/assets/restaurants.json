@@ -1,0 +1,67 @@
+{
+  "restaurants": [
+    {
+      "name": "Alfredo's dishes",
+      "description": "At Alfredo's, we provide the best seafood dishes."
+    },
+    {
+      "name": "Jamie's burgers",
+      "description": "At Jamie's, we serve the best meat and vegan burgers!"
+    },
+    {
+      "name": "Pizza John",
+      "description": "Get the best pizza in town. We also serve vegan burgers!"
+    },
+    {
+      "name": "Dinner in the Clouds",
+      "description": "At DitC, you can experience the full immersive dining experience."
+    },
+    {
+      "name": "Eternity lunch",
+      "description": "At Eternity lunch, you will get the best American dishes."
+    },
+
+    {
+      "name": "Food and Coffee",
+      "description": "Drink your coffee and then have lunch at FaC!"
+
+    },
+    {
+      "name": "Pizza and burgers Brazil",
+      "description": "Get your best burgers and pizza here in Brazil!"
+    },
+    {
+      "name": "Merry Dinner",
+      "description": "Get the Christmas experience at Merry Dinner with Santa!"
+
+    },
+    {
+      "name": "Uncle Ben's Pizza shop",
+      "description": "Relieve the childhood pizza experience at Uncle Ben's pizza shop!"
+    },
+    {
+      "name": "Spicy Grill Toronto",
+      "description": "Get the best culinary experience in Toronto."
+
+    },
+    {
+      "name": "Cheese Food shop",
+      "description": "Cheesy meals with cheesy ingredients, it's all about cheese!"
+    },
+    {
+      "name": "Mexican Spicy Food in Atlanta",
+      "description": "Get your spicy food dose here in Atlanta at Mexican Spicy Food!"
+
+    },
+    {
+      "name": "Spanish Kitchen Reinvented",
+      "description": "Check out the true culinary experience with spanish dishes in NYC!"
+    },
+
+    {
+
+      "name": "Mike and Ben's food pub",
+      "description": "Come get the best food in New Jersey, now at Mike and Ben's!"
+    }
+  ]
+}
