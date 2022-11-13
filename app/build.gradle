@@ -3,12 +3,13 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    namespace 'com.college.questions'
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.college.questions"
         minSdk 27
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
