@@ -1,119 +1,57 @@
 package com.college.quiz1_question;
 
+import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-import com.college.quiz1_question.util.MyFileReader;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import androidx.navigation.NavController;
+import androidx.navigation.fragment.NavHostFragment;
+import androidx.navigation.ui.NavigationUI;
 
-import java.util.ArrayList;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 
 /*
 
- This application decodes a JSON file
- and displays the results on a textview.
+ This application uses the Navigation Component for the  fragments.
 
- The application reads a restaurants JSON file
- and builds a list of restaurants.
+ It has a Bottom Navigation to move between the fragments.
 
- We then display the list of the names of the restaurants
- in the TextView.
+ We have : InboxFragment, OutBoxFragent and HelpFragment
 
- A button is available to clear the TextView and do it again.
+ TODO 1:
+ Bottom Navigation currently contains Inbox and Outbox menu items.
+ Complete it so that the user can switch to HelpFragment
 
- The TODOs below provide step by step instructions
- to complete the implementation.
+ TODO 2:
+ Add an CatFragment that displays:
+    1. The text "Cat Fragment" in a TextView.
+    2. An image view below the TextView with a Cat image.
+        There is a cat image in res/drawable
+ Add this new fragment to the Bottom Navigation
 
-
- Challenge 1:
- Convert the TextView into a ListView and display
- the result accordingly.
-
-
- Challenge 2:
- Convert the clear button into a menu item on the Options Menu.
- You can implement it as an Action item with an icon
+ Note:
+ You will need to update the navigation graph
 
 */
 
 public class MainActivity extends AppCompatActivity {
 
-    static private final String TAG = "MainActivity";
-
-    // Declare a List of restaurants
-    ArrayList<Restaurant> listOfRestaurants;
-
-    // TextView where we display the result on the screen
-    private TextView descriptionTv;
-
+    public static final String TAG = "MainActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Find the view
-        descriptionTv = findViewById(R.id.description);
-
-        // When we click on btn_read_json, we call the readData
-        // and decode the results
-        Button btnJson = findViewById(R.id.btn_read_json);
-
-        // When the button is presssed, call readData
-        // With the results, populate the textview
-        // Put on the TextView the names of the restaurants.
-        btnJson.setOnClickListener(v -> {
-            // Read the file
-            listOfRestaurants = readData( "restaurants.json");
-
-            // TODO (1): Extract the restaurants names
-            // You can use StringBuilder to build the
-            // desired result string:
-            //      StringBuilder sb = new StringBuilder();
-            // Add an item to a StringBuilder:
-            //      sb.append(resto.getName());
-            // Extract the string:
-            //      sb.toString()
-
-            // TODO (2): Display the result on the TextView
-
-        });
-    }
-
-    //TODO (6): Clear the output textview
-    public void clear(View v) {
-
-    }
-
-    // Deserialize a list of states from a file in JSON format
-    public ArrayList<Restaurant> readData(String fileName){
-
-        final ArrayList<Restaurant> mylist = new ArrayList<>();
-
-        try {
-            // load the data in an ArrayList
-            String jsonString     = MyFileReader.readJson(this, fileName);
-            JSONObject json       = new JSONObject(jsonString);
-            JSONArray items = json.getJSONArray("restaurants");
-
-            // Loop through the list in the json array
-            for (int i = 0; i < items.length(); i++){
-
-                //TODO (3): Extract the name and description
-
-                //TODO (4) : create a Restaurant object
-
-                //TODO (5): Add the restaurant object to the lisat
-
-            }
-        } catch (Exception e) {
-            // Log the error
-            e.printStackTrace();
+        NavHostFragment navHostFragment = (NavHostFragment)getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
+        NavController navController = null;
+        if (navHostFragment != null) {
+            navController = navHostFragment.getNavController();
         }
-        return mylist;
+
+        BottomNavigationView bottomNav = findViewById(R.id.nav_bottom_view);
+        if (navController != null) {
+            NavigationUI.setupWithNavController(bottomNav, navController);
+        }
+
     }
 }

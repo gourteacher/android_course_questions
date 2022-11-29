@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+        <item
+            android:id="@+id/inboxFragment"
+            android:icon="@android:drawable/ic_notification_overlay"
+            android:title="@string/inbox" />
+        <item
+            android:id="@+id/outboxFragment"
+            android:icon="@android:drawable/checkbox_on_background"
+            android:title="@string/outbox" />
+
+</menu>

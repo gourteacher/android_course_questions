@@ -1,5 +1,10 @@
 <resources>
-    <string name="app_name">Question - Read JSON</string>
-    <string name="btn_clear">Clear</string>
-    <string name="btn_read_json"> Read JSON</string>
+    <string name="app_name">Question - Fragment Navigation</string>
+    <string name="inbox">Inbox</string>
+    <string name="outbox">Outbox</string>
+    <string name="help">Help</string>
+    <string name="inbox_fragment">Inbox fragment</string>
+    <string name="outbox_fragment">Outbox fragment</string>
+    <string name="help_fragment">Help fragment</string>
+
 </resources>
