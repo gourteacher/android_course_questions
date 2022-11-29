@@ -23,3 +23,25 @@ This project is an adaptation from Google Sample Code. It includes:
 
 Each branch has a MainActivity.java file where the work to do is identified by a `TODO`. 
 This is the only file to change. Everything else is done for you.
+
+
+### Branch read_json_question
+- This application decodes a JSON file and displays the results on a textview.
+- The application reads a restaurants JSON file and builds a list of restaurants.
+- We then display the list of the names of the restaurants  in the TextView.
+
+### Branch fragment_question
+- This application uses the Navigation Component for the  fragments.
+- It has a Bottom Navigation to move between the fragments.
+- We have : InboxFragment, OutBoxFragent and HelpFragment
+
+- TODO 1:
+    - Bottom Navigation currently contains Inbox and Outbox menu items.
+    - Complete it so that the user can switch to HelpFragment
+
+- TODO 2:
+    - Add an CatFragment that displays:
+    - 1. The text "Cat Fragment" in a TextView.
+    - 2. An image view below the TextView with a Cat image.
+    - There is a cat image in res/drawable
+    - Add this new fragment to the Bottom Navigation
