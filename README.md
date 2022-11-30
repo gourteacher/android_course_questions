@@ -33,7 +33,7 @@ This is the only file to change. Everything else is done for you.
 ### Branch fragment_question
 - This application uses the Navigation Component for the  fragments.
 - It has a Bottom Navigation to move between the fragments.
-- We have : InboxFragment, OutBoxFragent and HelpFragment
+- We have : InboxFragment, OutBoxFragment and HelpFragment
 
 - TODO 1:
     - Bottom Navigation currently contains Inbox and Outbox menu items.
