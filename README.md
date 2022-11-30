@@ -32,14 +32,14 @@ This is the only file to change. Everything else is done for you.
 ### Branch question_fragments
 - This application uses the Navigation Component for the  fragments.
 - It has a Bottom Navigation to move between the fragments.
-- We have : InboxFragment, OutBoxFragent and HelpFragment
+- We have : InboxFragment, OutBoxFragment and HelpFragment
 
 - TODO 1:
     - Bottom Navigation currently contains Inbox and Outbox menu items.
     - Complete it so that the user can switch to HelpFragment
 
 - TODO 2:
-  - Add an CatFragment that displays:
+  - Add a CatFragment that displays:
   - 1. The text "Cat Fragment" in a TextView.
   - 2. An image view below the TextView with a Cat image.
   - There is a cat image in res/drawable
