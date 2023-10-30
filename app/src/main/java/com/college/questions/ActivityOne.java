@@ -19,9 +19,9 @@ public class ActivityOne extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_one);
 
-        //TODO 1 - Create the intent here
+        //TODO 1 - Create the intent
 
-        //TODO 2 - Save information to pass
+        //TODO 2 - Save information to pass : Name and Rank
 
         //TODO 3 - start the activity when the button is clicked
     }
