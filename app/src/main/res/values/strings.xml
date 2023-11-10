@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Question - Calculator</string>
+    <string name="app_name">Question - View Binding</string>
 
     <!-- Hint for first operand EditText -->
     <string name="type_operand_one_hint">Type Operand 1</string>

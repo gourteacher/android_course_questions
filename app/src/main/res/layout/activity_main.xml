@@ -7,7 +7,7 @@
     android:orientation="vertical">
 
     <EditText
-        android:id="@+id/operand_one_edit_1"
+        android:id="@+id/operand_one_edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -18,13 +18,13 @@
         android:inputType="numberSigned"
         android:minHeight="48dp"
         android:textColorHint="#757575"
-        app:layout_constraintBottom_toTopOf="@+id/operand_two_edit_2"
+        app:layout_constraintBottom_toTopOf="@+id/operand_two_edit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/operand_two_edit_2"
+        android:id="@+id/operand_two_edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -38,7 +38,7 @@
         app:layout_constraintBottom_toTopOf="@+id/operation_result"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/operand_one_edit_1" />
+        app:layout_constraintTop_toBottomOf="@+id/operand_one_edit" />
 
     <TextView
         android:id="@+id/operation_result"
@@ -52,7 +52,7 @@
         app:layout_constraintBottom_toTopOf="@+id/add_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/operand_two_edit_2" />
+        app:layout_constraintTop_toBottomOf="@+id/operand_two_edit" />
 
     <Button
         android:id="@+id/add_button"
