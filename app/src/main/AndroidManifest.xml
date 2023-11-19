@@ -13,7 +13,22 @@
         android:theme="@style/Theme.Question"
         tools:targetApi="31">
         <activity
-            android:name="com.college.questions.MainActivity"
+            android:name=".ThirdActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".SecondActivity"
+            android:exported="false"
+            android:parentActivityName=".FirstActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".FirstActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

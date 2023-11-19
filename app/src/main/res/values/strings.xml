@@ -1,26 +1,15 @@
 <resources>
-    <string name="app_name">Question - View Binding</string>
+    <string name="app_name">Bottom Nav - Question</string>
+    <string name="red_color">Red</string>
+    <string name="yellow_color">Yellow</string>
+    <string name="blue_color">Blue</string>
+    <string name="green_color">Green</string>
 
-    <!-- Hint for first operand EditText -->
-    <string name="type_operand_one_hint">Type Operand 1</string>
+    <string name="move_to_next">Next Activity</string>
+    <string name="second_activity">Second Activity</string>
+    <string name="third_activity">Third Activity</string>
 
-    <!-- Hint for second operand EditText -->
-    <string name="type_operand_two_hint">Type Operand 2</string>
-
-    <!-- Button label for add operation -->
-    <string name="add_operation_text">Add</string>
-
-    <!-- Button label for subtract operation -->
-    <string name="sub_operation_text">Sub</string>
-
-    <!-- Button label for divide operation -->
-    <string name="div_operation_text">Div</string>
-
-    <!-- Button label for mul operation -->
-    <string name="mul_operation_text">Mul</string>
-
-    <!-- Message for textview in case of errors  -->
-    <string name="computationError">Error</string>
-    <string name="operation_result">Result</string>
-
+    <string name="home">Home</string>
+    <string name="second">Second</string>
+    <string name="third">Third</string>
 </resources>
