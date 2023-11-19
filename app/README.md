@@ -1,3 +1,4 @@
 
 
-Convert the code in MainActivity.java to use View Binding
+Add a fourth activity to the bottom navigation view
+When clicked, this activity should be displayed
