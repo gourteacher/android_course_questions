@@ -29,3 +29,5 @@ This is the only file to change. Everything else is done for you.
 - The application reads a restaurants JSON file and builds a list of restaurants.
 - We then display the list of the names of the restaurants  in the TextView.
 
+### Branch up_navigation_question
+- Add Up Navigation with a third activity that comes back to first activity

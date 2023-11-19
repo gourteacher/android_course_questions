@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/red_id"
+        android:title="@string/red_color" />
+
+    <item
+        android:id="@+id/yellow_id"
+        android:title="@string/yellow_color" />
+
+    <item
+        android:id="@+id/blue_id"
+        android:title="@string/blue_color" />
+
+    <item
+        android:id="@+id/green_id"
+        android:title="@string/green_color" />
+    <item
+        android:id="@+id/move_to_next"
+        android:icon="@android:drawable/ic_media_play"
+        android:title="@string/move_to_next"
+        app:showAsAction="always" />
+</menu>
