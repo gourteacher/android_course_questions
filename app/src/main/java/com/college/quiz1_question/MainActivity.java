@@ -73,14 +73,21 @@ public class MainActivity extends AppCompatActivity {
             // TODO (4): Extract the restaurants names
             // You can use StringBuilder to build the
             // desired result string:
-            //      StringBuilder sb = new StringBuilder();
+                StringBuilder sb = new StringBuilder();
             // Add an item to a StringBuilder:
-            //      sb.append(resto.getName());
+            //          sb.append(resto.getName());
             // Extract the string:
             //      sb.toString()
 
+            for (Restaurant resto : listOfRestaurants) {
+                sb.append(resto.getName());
+                sb.append("\n");
+            }
+
+            String result = sb.toString();
             // TODO (5): Display the result on the TextView
 
+            descriptionTv.setText(result);
         });
     }
 
@@ -104,10 +111,12 @@ public class MainActivity extends AppCompatActivity {
             for (int i = 0; i < items.length(); i++){
 
                 //TODO (1): Extract the name and description
-
+                String name = items.getJSONObject(i).getString("name");
+                String description = items.getJSONObject(i).getString("description");
                 //TODO (2) : create a Restaurant object
-
-                //TODO (3): Add the restaurant object to the lisat
+                Restaurant restaurant = new Restaurant(name, description);
+                //TODO (3): Add the restaurant object to the list
+                mylist.add(restaurant);
 
             }
         } catch (Exception e) {
