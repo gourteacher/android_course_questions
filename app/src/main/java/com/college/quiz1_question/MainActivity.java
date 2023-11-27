@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
             // Read the file
             listOfRestaurants = readData( "restaurants.json");
 
-            // TODO (1): Extract the restaurants names
+            // TODO (4): Extract the restaurants names
             // You can use StringBuilder to build the
             // desired result string:
             //      StringBuilder sb = new StringBuilder();
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
             // Extract the string:
             //      sb.toString()
 
-            // TODO (2): Display the result on the TextView
+            // TODO (5): Display the result on the TextView
 
         });
     }
@@ -103,11 +103,11 @@ public class MainActivity extends AppCompatActivity {
             // Loop through the list in the json array
             for (int i = 0; i < items.length(); i++){
 
-                //TODO (3): Extract the name and description
+                //TODO (1): Extract the name and description
 
-                //TODO (4) : create a Restaurant object
+                //TODO (2) : create a Restaurant object
 
-                //TODO (5): Add the restaurant object to the lisat
+                //TODO (3): Add the restaurant object to the lisat
 
             }
         } catch (Exception e) {
