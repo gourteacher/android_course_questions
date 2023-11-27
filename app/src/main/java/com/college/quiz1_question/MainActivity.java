@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
 
     //TODO (6): Clear the output textview
     public void clear(View v) {
-
+        descriptionTv.setText("");
     }
 
     // Deserialize a list of states from a file in JSON format
