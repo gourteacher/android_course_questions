@@ -1,4 +1,4 @@
-package com.college.quiz1_question;
+package com.college.questions;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,9 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import com.college.quiz1_question.util.MyFileReader;
+import com.college.questions.util.MyFileReader;
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;

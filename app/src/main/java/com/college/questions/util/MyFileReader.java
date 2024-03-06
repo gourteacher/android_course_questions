@@ -1,4 +1,4 @@
-package com.college.quiz1_question.util;
+package com.college.questions.util;
 
 import android.content.Context;
 
