@@ -13,13 +13,21 @@
         android:theme="@style/Theme.Quiz1_Question"
         tools:targetApi="31">
         <activity
-            android:name="com.college.questions.MainActivity"
-            android:exported="true">
+            android:name="com.college.questions.Restaurant"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.college.questions.SecondActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.college.questions.MainActivity"
+            android:exported="true">
+
         </activity>
     </application>
 

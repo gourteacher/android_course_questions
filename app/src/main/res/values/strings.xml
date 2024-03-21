@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">Question - Read JSON</string>
+    <string name="app_name">Question - Fix Bugs</string>
     <string name="btn_clear">Clear</string>
-    <string name="btn_read_json"> Read JSON</string>
+    <string name="move_to_next">Go to Second Activity</string>
+    <string name="first_activity">Main Activity</string>
+    <string name="second_activity">Second Activity</string>
 </resources>
