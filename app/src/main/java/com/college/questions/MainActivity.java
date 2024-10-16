@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
 
-    private ArrayList<String> myItems = new ArrayList<>(  );
+    private final ArrayList<String> myItems = new ArrayList<>(  );
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
