@@ -1,8 +1,17 @@
 <resources>
-    <string name="app_name">Quiz1_Question</string>
-    <string name="button_inc">increment</string>
-    <string name="button_dec">decrement</string>
-    <string name="button_reset">reset</string>
-    <string name="button_toast">show toast</string>
-    <string name="button_snackbar">show snackbar</string>
+    <string name="app_name">Bottom Nav - Question</string>
+    <string name="red_color">Red</string>
+    <string name="yellow_color">Yellow</string>
+    <string name="blue_color">Blue</string>
+    <string name="green_color">Green</string>
+
+    <string name="move_to_next">Next Activity</string>
+    <string name="second_activity">Second Activity</string>
+    <string name="third_activity">Third Activity</string>
+
+    <string name="home">Home</string>
+    <string name="second">Second</string>
+    <string name="third">Third</string>
+    <string name="Fourth">Fourth</string>
+    <string name="Fourth_activity">Fourth Activity</string>
 </resources>
